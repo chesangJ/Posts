@@ -1,17 +1,16 @@
-package dev.mitingi.products
+package dev.mitingi.products.api
 
-import android.os.IInterface
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 
 object ApiClient {
     var retrofit=Retrofit.Builder()
-        .baseUrl("https://jsonplaceholder.typicode.com/posts")
+        .baseUrl("https://jsonplaceholder.typicode.com/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun  <T>buildClient(apiIInterface:Class<T>):T{
-        return retrofit.create(apiIInterface)
+    fun <T>buildClient(apiInterface:Class<T>):T{
+        return retrofit.create(apiInterface)
     }
 }

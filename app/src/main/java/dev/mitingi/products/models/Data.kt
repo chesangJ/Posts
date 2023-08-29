@@ -1,4 +1,4 @@
-package dev.mitingi.products
+package dev.mitingi.products.models
 
 data class Data(
     var user:Int,
@@ -6,5 +6,3 @@ data class Data(
     var title:String,
     var body:String
 )
-
-
